@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### treating the application.properties file as a .env equivalent ###
+application.properties

@@ -1,15 +1,19 @@
-services:
-  mysql:
-    image: 'mysql:latest'
-    environment:
-      - 'MYSQL_DATABASE=GroceryGurusDB'
-      # - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=wang'
-      # - 'MYSQL_USER=myuser'
-    ports:
-      - '3306'
-    volumes:
-      - GroceryGurusDB:/var/lib/mysql
+# services:
+  # mysql:
+  #   image: 'mysql:latest'
+  #   environment:
+  #     below is used for a local DB connection
+  #     - 'MYSQL_DATABASE=GroceryGurusDB'
+  #     - 'MYSQL_PASSWORD=secret'
+  #     - 'MYSQL_ROOT_PASSWORD=wang'
+  #     - 'MYSQL_USER=myuser'
+      
+  #   ports:
+  #     - '3306'
+  #   volumes:
+  #     - GroceryGurusDB:/var/lib/mysql
 
-volumes:
-  GroceryGurusDB:
+
+
+# volumes:
+#   GroceryGurusDB:
