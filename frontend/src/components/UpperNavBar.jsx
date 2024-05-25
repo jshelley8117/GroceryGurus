@@ -25,6 +25,7 @@ const Search = styled('div')(({ theme }) => ({
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
+  height: 'rem',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
     width: 'auto',
@@ -145,8 +146,8 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ bgcolor: '#1fc600'}}>
-        <Toolbar>
+      <AppBar position="static" sx={{ bgcolor: '#2B891C'}}>
+        <Toolbar sx={{ alignItems: 'center', padding: '7px 0' }}> 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: 'flex', justifyContent: 'center', flexGrow: -2 }}>
           <Typography
@@ -159,9 +160,9 @@ export default function PrimarySearchAppBar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'roboto slab',
               fontWeight: 700,
+              fontSize: '1.7rem',
               color: 'inherit',
               textDecoration: 'none',
-
             }}
           >
             GroceryGurus
