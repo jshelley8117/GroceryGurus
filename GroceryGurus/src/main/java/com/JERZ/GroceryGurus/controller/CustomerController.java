@@ -41,6 +41,7 @@ public class CustomerController {
 
     @PostMapping("/customers")
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer c) {
+        System.out.println(c.toString());
         this.customerService.create(c);
         return ResponseEntity.noContent().build();
     }
