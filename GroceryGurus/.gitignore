@@ -38,4 +38,4 @@ out/
 
 
 ### treating the application.properties file as a .env equivalent ###
-src/main/resources/application.properties
+# src/main/resources/application.properties
