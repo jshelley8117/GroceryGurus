@@ -20,7 +20,6 @@ import java.util.List;
 @RequestMapping("api/v1/")
 public class ProductController {
     
-    // this just allows our controller to use productService methods - we need an instance of this
     private ProductService productService;
     public ProductController(ProductService productService) {
         this.productService = productService;
