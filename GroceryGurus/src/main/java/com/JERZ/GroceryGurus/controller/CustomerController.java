@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/")
 public class CustomerController {
-    private CustomerService customerService;
+    private final CustomerService customerService;
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
