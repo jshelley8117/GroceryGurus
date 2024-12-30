@@ -1,5 +1,7 @@
 package com.JERZ.GroceryGurus.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.JERZ.GroceryGurus.entity.User;
@@ -11,7 +13,12 @@ import java.util.List;
 
 public class UserService {
     
+    @Autowired
     private final UserRepository userRepository;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -26,6 +33,9 @@ public class UserService {
     }
 
     public void create(User u) {
+        System.out.println("UserService.create: u = " + u);
+        u.setPassword(passwordEncoder.encode(u.getPassword()));
+        u.setEnabled(true);
         this.userRepository.save(u);
     }
 
